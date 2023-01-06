@@ -8,5 +8,3 @@ class Prediction(models.Model):
 class TextPrediction(Prediction):
     sample = models.TextField()
 
-class ImagePrediction(Prediction):
-    sample = models.ImageField(upload_to='upload')
