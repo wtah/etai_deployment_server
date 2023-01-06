@@ -54,8 +54,8 @@ class TextPredictionListCreate(generics.ListCreateAPIView):
         with torch.no_grad():
             output = self.model(**encoded_input)
         scores = output[0][0].detach().numpy().tolist()
-        result = F.softmax(output)
-        return result
+        result = np.shape(scores)
+        return scores, result
 
     # def infer_disc(self, text):
     #     encoded_input = self.tokenizer(self.preprocess(text), return_tensors='pt')
