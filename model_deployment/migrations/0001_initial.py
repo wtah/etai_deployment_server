@@ -21,14 +21,6 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='ImagePrediction',
-            fields=[
-                ('prediction_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='model_deployment.prediction')),
-                ('sample', models.ImageField(upload_to='')),
-            ],
-            bases=('model_deployment.prediction',),
-        ),
-        migrations.CreateModel(
             name='TextPrediction',
             fields=[
                 ('prediction_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='model_deployment.prediction')),

@@ -20,8 +20,6 @@ from model_deployment import views
 
 if settings.INFERENCE_MODE == 'text':
     inference_path = path('', views.TextPredictionListCreate.as_view())
-elif settings.INFERENCE_MODE == 'image':
-    inference_path = path('', views.ImagePredictionListCreate.as_view())
 
 
 urlpatterns = [
